@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Expense</title>
+    <link rel="stylesheet" href="addexpense.css">
+</head>
+<body>
+    <div class="box">
+        <div class="amount">
+            <label>Enter the amount of Expense:</label>
+            <input type="number" min="0" step="10" value="0" id="amount">
+        </div>
+        <div class="category">
+            <label>Where the expense was done?</label>
+            <select id="categorySelect">
+                <option value="">Select Category</option>
+                <option value="food">Food</option>
+                <option value="travel">Travel</option>
+                <option value="shopping">Shopping</option>
+                <option value="medical">Medical</option>
+                <option value="education">Education</option>
+                <option value="leisure">Leisure</option>
+                <option value="other">Other</option>
+                <option value="custom">Add new</option>
+            </select>
+            <input type="text" id="customCategory" placeholder="Enter new category" style="display: none;">
+        </div>
+        <div class="add">
+            <button id="addBtn">+ Add</button>
+        </div>
+    </div>
+    <script src="addexpense.js"></script>
+</body>
+</html> 

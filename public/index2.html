@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="style2.css" />
+  </head>
+  <body>
+    <div class="box">
+      <nav>
+        <h1>Expense Tracker</h1>
+        <ul>
+          <li><button>Dashboard</button></li>
+          <a href="profile.html"><li><button>Profile</button></li></a>
+          <a href="addexpense.html"><li><button>Add Expense</button></li></a>
+        </ul>
+      </nav>
+      <div class="main">
+        <div class="top">
+          <div class="row1">
+            <div class="greet">Hello user!! View and manage your monthly expenses here</div>
+            <div class="profile">
+              <a href="profile.html" class="unknown">
+                <button class="pfp">
+                  <img src="./images/Passport size photo.jpeg" alt="Profile picture" style="width: 40px; border-radius:50%"/>
+                  Manage Profile
+                </button>
+              </a>
+            </div>
+          </div>
+          <div class="row2">
+            <div class="left_row2">
+              <button id="calendar"><img src="./images/calendar.jpg" alt="calendar" style="width: 2vw; border-radius: 100%"/></button>
+              <button id="month" style="width: 10vw; border-radius: 50px">This year</button>
+            </div>
+            <div class="right_row2">
+              <a href="addsavings.html" style="color: black;"><button style="border: 1px solid black;">+ Add Savings Goals</button></a>
+            </div>
+          </div>
+        </div>
+        <div class="cards">
+          <div class="card">
+            <h4 style="grid-area: header;">Recent Transaction</h4>
+            <div class="amt" style="grid-area: amt;" id="last_transaction"></div>
+          </div>
+          <div class="card">
+            <h4 style="grid-area: header;" id="monthly_expense_label">Monthly Expenses</h4>
+            <div class="amt" style="grid-area: amt;" id="net_expense"></div>
+            <div class="time" style="grid-area: month;" id="view_toggle_label">Click to view for the whole year</div>
+          </div>
+          <div class="card">
+            <h4 style="grid-area: header;">Monthly Savings</h4>
+            <div class="amt" style="grid-area: amt;" id="monthlySavings">$0</div>
+            <div class="time" style="grid-area: month;">Click to view for the whole year</div>
+          </div>
+          <div class="card">
+            <h4 style="grid-area: header;">Set Goal Expense</h4>
+            <div class="amt" style="grid-area: amt;" id="goalExpense">$0</div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="left">
+            <div class="moneyflow">
+              <canvas id="bargraph"></canvas>
+            </div>
+            <div class="recent">
+              <h3>Recent transactions</h3>
+              <div class="table">
+                <table id="table">
+                  <tr>
+                    <th>Amount</th>
+                    <th>Where</th>
+                    <th>Date</th>
+                    <th>Time</th>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+          <div class="right">
+            <div class="budget">
+              <canvas id="pichart"></canvas>
+            </div>
+            <div class="savingsgoal" id="savingsgoal">
+              <h3>Savings Goal</h3>
+            </div>
+          </div>  
+        </div>
+      </div>
+      <a href="addexpense.html"><button class="expense">+ Add Expense</button></a>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Savings</title>
+    <link rel="stylesheet" href="addsavings.css">
+</head>
+<body>
+    <div class="box">
+        <div class="cont1">
+            <div class="header">Please select the goal in which you want to save:</div>
+            <select name="" id="savingsGoal">
+                <option value="">Select Goal</option>
+                <option value="home_loan">Home Loan</option>
+                <option value="dream_car">Dream Car</option>
+                <option value="gold">Gold</option>
+                <option value="other">Other</option>
+                <option value="custom">Add new</option>
+            </select>
+            <input type="text" id="customGoal" placeholder="Enter new goal name" style="display: none; margin-top: 10px;">
+        </div>
+        <div class="cont2">
+            <div class="header">Please enter the amount:</div>
+            <input type="text" placeholder="1000" id="amount">
+        </div>
+        <a href="index2.html"><button id="addGoal">+ Add to savings</button></a>
+    </div>
+    <script src="addsavings.js"></script>
+</body>
+</html>
